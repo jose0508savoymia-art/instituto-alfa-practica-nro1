@@ -1,23 +1,21 @@
- <!DOCTYPE html>
+---
+import Menu from "../componentes/Menu.astro";
+import '../styles/global.css'
+---
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>coffe</title>
-</head>
-<body> 
-  <header>
-<nav>
- <a href="">inicio</a>
- <a href="about">sobre nosotros</a>
- <a href="service">servicio</a>
- <a href="home">hogar</a>
-<a href="menu">menu</a>
-<a href="contact">contactanos</a>
-</nav>
-  </header>
-    <slot />  
-    
+  </head>
+  <body>
+
+    <Menu />
+  
+    <slot />
+
     aqui va el footer
-</body>
+  </body>
 </html>
