@@ -1,7 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Tarjetadeproducto from "../componentes/tarjetadeproducto.astro";
+import Layout from "../layouts/Layout.astro";
 ---
+
 <Layout>
   <h1>Bienvenido a nuestra cafetería</h1>
   <p>Disfruta de los mejores cafés y pasteles en un ambiente acogedor.</p>
+  <img src="menu-3.jpg" alt="" />
+
+  <div class="tarjetas">
+    <Tarjetadeproducto
+      nombre="pan de jamon"
+      precio="3$"
+      descripcion=""
+      imagen="pan.webp"
+    />
+    <Tarjetadeproducto
+      nombre="hamburguesa"
+      precio="2$"
+      descripcion=""
+      imagen="hamburgues.jpg"
+    />
+    <Tarjetadeproducto
+      nombre="cafe capuhino"
+      precio="1$"
+      descripcion=""
+      imagen="pl.webp"
+    />
+  </div>
 </Layout>
+<style>
+  img {
+    width: 100%;
+  }
+  .tarjetas {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+// Props: nombre, descripcion, precio, imagen
+const { nombre, descripcion, precio, imagen } = Astro.props;
+---
+
+<article class="tarjeta-producto">
+    <img src={imagen} alt={`Imagen de ${nombre}`} class="tarjeta-producto__imagen" />
+    <div class="tarjeta-producto__contenido">
+        <h2 class="tarjeta-producto__nombre">{nombre}</h2>
+        <p class="tarjeta-producto__descripcion">{descripcion}</p>
+        <span class="tarjeta-producto__precio">${precio}</span>
+    </div>
+</article>
+
+<style>
+.tarjeta-producto {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 280px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    font-family: system-ui, sans-serif;
+}
+.tarjeta-producto__imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.tarjeta-producto__contenido {
+    padding: 1rem;
+}
+.tarjeta-producto__nombre {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: #4e342e;
+}
+.tarjeta-producto__descripcion {
+    margin: 0 0 1rem 0;
+    color: #6d4c41;
+    font-size: 1rem;
+}
+.tarjeta-producto__precio {
+    font-weight: bold;
+    color: #388e3c;
+    font-size: 1.1rem;
+}
+<style>
